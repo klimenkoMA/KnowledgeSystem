@@ -35,7 +35,7 @@ export const register = async (req, res) => {
                 expiresIn: '30d',
             },
         );
-
+        //Add into UserData all fields, but passwordHash
         const {passwordHash, ...UserData} = user._doc;
 
         //Return response
