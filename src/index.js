@@ -34,6 +34,9 @@ app.post('/auth/login', (req, res) =>{
     });
 });
 
+// app.post('/auth/register', registerValidation, PostController.register);
+
+
 app.listen(3333, (err) => {
     if (err) {
         console.log(err);
