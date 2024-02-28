@@ -1,6 +1,8 @@
 import UserModel from '../model/User.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
+import {validationResult} from "express-validator";
+
 
 /**
  * Класс для создания роутов для сущности User. Необходимый
@@ -10,6 +12,11 @@ import bcrypt from 'bcrypt';
 export const register = async (req, res) => {
 
     try {
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.status(404).json(errors.array());
+        }
+
         //Take password from user`s request
         const password = req.body.password;
         //Create a special object for a hashing user`s password
