@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Greetings from "./Greetings";
 import useInputValidation from "./onBlur/OnBlur";
+import './styles/SimpleFormStyle.scss';
 
 
 const SimpleForm = () => {
@@ -20,53 +21,30 @@ const SimpleForm = () => {
     };
 
     return (
-        <div
-            style={{
-                margin: 50,
-                padding: 10,
-                width: 300,
-                border: "1px solid black",
-                backgroundColor: "black",
-                color: "white"
-            }}>
-            <div
-                style={{marginBottom: 10}}
-            >
-                <label>
-                    First name:
+        <div className="simple-form">
+            <div className="input-wrapper">
+                <label className="label">
+                    <div>First name:</div>
                     <input
-                        style={{
-                            backgroundColor: '#EFEFFF',
-                            marginLeft: 10
-                        }}
+                        className="input"
                         type="text"
                         name="firstName"
                         onChange={onFirstNameChange}
                         onBlur={() => onBlurFirst(firstName)}
                     />
-                    {firstNameError &&
-                    <div
-                        style={{
-                            color: 'red',
-                            margin: 5
-                        }}
-                    >{firstNameError}</div>}
+                    {firstNameError && <div className="error-message">{firstNameError}</div>}
                 </label>
             </div>
-            <label>
+            <label className="label">
                 <div>Last name:</div>
-                <input type="text"
-                       name="lastName"
-                       onChange={onLastNameChange}
-                       onBlur={() => onBlurLast(lastName)}
+                <input
+                    className="input"
+                    type="text"
+                    name="lastName"
+                    onChange={onLastNameChange}
+                    onBlur={() => onBlurLast(lastName)}
                 />
-                {lastNameError &&
-                <div
-                    style={{
-                        color: 'red',
-                        margin: 5
-                    }}
-                >{lastNameError}</div>}
+                {lastNameError && <div className="error-message">{lastNameError}</div>}
             </label>
             <Greetings firstName={firstName} lastName={lastName}/>
         </div>
