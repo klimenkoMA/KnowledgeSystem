@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #552c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,13 @@
   font-size: calc(12px + 2vmin);
   color: white;
 }
+
+/*.App-body {*/
+/*  background-image: url('./public/backFon.jpg');*/
+/*  background-size: auto;*/
+/*  background-position: center center;*/
+/*  background-repeat: no-repeat;*/
+/*}*/
 
 .App-link {
   color: #61dafb;

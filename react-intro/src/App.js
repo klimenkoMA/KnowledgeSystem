@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Greetings from "./Greetings";
 import SimpleForm from "./SimpleForm";
 
 function App() {
@@ -8,10 +7,18 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    <SimpleForm/>
-                </p>
             </header>
+            <body style={{
+                background: `url(/backFon.jpg`,
+                backgroundSize: `auto`
+            }}>
+            <p>
+                <SimpleForm/>
+            </p>
+            <p>
+                <SimpleForm/>
+            </p>
+            </body>
         </div>
     );
 }
