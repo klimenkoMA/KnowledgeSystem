@@ -10,7 +10,7 @@ const Footer = () => {
         >
             <div className="footer">
                 <p>&copy; 2024 Система знаний</p>
-                <p>Made with ❤️ using React</p>
+                <p>Made with using React</p>
             </div>
         </motion.footer>
     );

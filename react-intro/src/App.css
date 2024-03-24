@@ -25,17 +25,29 @@
   justify-content: center;
   font-size: calc(12px + 2vmin);
   color: white;
+  padding: 10px;
 }
 
-/*.App-body {*/
-/*  background-image: url('./public/backFon.jpg');*/
-/*  background-size: auto;*/
-/*  background-position: center center;*/
-/*  background-repeat: no-repeat;*/
-/*}*/
+.App-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /*background-image: url('./public/backFon.jpg');*/
+  /*background-size: auto;*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+}
+
+.App-main {
+  flex: 1;
+  padding: 20px;
+}
 
 .App-footer {
-  bottom: 0;
+  padding: 10px;
+  margin-top: auto;
   width: 100%;
   background-color: #1480b7;
   font-size: calc(10px + 2vmin);
