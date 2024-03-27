@@ -3,6 +3,7 @@ import './App.css';
 import SimpleForm from "./SimpleForm";
 import Footer from "./footer/footer";
 import MachineLearning from "./tensor/tensor";
+import YandexAIClient from "./yandexAI/AskYandexAI";
 
 function App() {
     return (
@@ -24,8 +25,12 @@ function App() {
                     <SimpleForm/>
                 </p>
                 <p>
-                    <MachineLearning />
+                    <YandexAIClient/>
                 </p>
+
+                {/*<p>*/}
+                {/*    <MachineLearning/>*/}
+                {/*</p>*/}
             </div>
             </body>
             <footer className="App-footer">
